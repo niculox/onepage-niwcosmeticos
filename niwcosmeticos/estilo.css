@@ -47,8 +47,6 @@ header {
     font-style: italic;
     color: #570022;
     font-size: 600%;
-    display: flex;
-    align-items: flex-start;
     margin-top: -4%;
     margin-left: -2%;
     letter-spacing: 10px;
@@ -114,4 +112,28 @@ header {
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.leFadeInRight {
+    animation-name: leFadeInRight;  
+}
+
+@keyframes leFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.leFadeInLeft span { animation-name: leFadeInLeft }
+@keyframes leFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to { opacity: 1 }
 }
