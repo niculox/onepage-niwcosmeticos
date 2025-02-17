@@ -6,3 +6,4 @@ pushRelease = new TimelineMax();
 pushRelease
   .to(".pushRelease", 0.18, {scale: .5, ease: Power1.easeOut})
   .to(".pushRelease", 0.7, {scale: 1, ease: Sine.easeOut});
+
