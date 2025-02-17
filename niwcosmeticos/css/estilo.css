@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    background-color: #ff86a7;
+    padding-bottom: 6%;
+}
+
+#header {
+    display: flex;
+    padding: 8% 0% 10% 0%;
+}
+
+#header > img {
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 2.5%;
+}
+
+#text_header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 6%;
+}
+
+#text_header > h1 {
+    color: #000000;
+    font-size: 500%;
+    font-family: "Cinzel Decorative", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-top: 5%;
+}
+
+#text_header > h2 {
+    font-family: "Corinthia", serif;
+    font-optical-sizing: auto;
+    font-weight: 1;
+    font-style: italic;
+    color: #570022;
+    font-size: 600%;
+    margin-top: -4%;
+    margin-left: -2%;
+    letter-spacing: 10px;
+}
+
+#section_header {
+    padding: 20%;
+    margin: -2% 6% 4% 6%;
+    background-color: #570022;
+    opacity: 90%;
+}
+
+#section_frames {
+    background-color: #20001F;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 4%;
+}
+
+.frame_produto {
+    background-color: #ff86a7;
+    margin: 1%;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    width: 40%; /* Mantém a largura total do container */
+    max-width: 48%; /* Define uma largura máxima para o card */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding-top: 1%;
+}
+
+
+.img_frame{
+    width: 90%;  
+    margin-top: 2%;
+}
+
+.text_frame {
+    text-align: justify;
+    margin: 10px; /* Ajuste as margens para evitar cortes */
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+    max-width: 88%; /* Limita a largura do texto à largura da imagem */
+    width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+    font-size: 120%;
+}
+
+.frame_produto:hover {
+    transform: scale(1.05); /* Efeito de hover mais sutil */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.frame_produto.slide {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.leFadeInRight {
+    animation-name: leFadeInRight;  
+}
+
+@keyframes leFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.leFadeInLeft span { animation-name: leFadeInLeft }
+@keyframes leFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to { opacity: 1 }
+}
+
+
+#flor{
+    position: absolute;
+    top: 70%;
+    left: -1%;
+    width: 50%;
+    transform: rotate(-10deg);
+}
+
+#flor-invertida{
+    position: absolute;
+    top: 74%;
+    right: -1%;
+    left: 50%;
+    width: 50%;
+    transform: rotate(10deg);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
