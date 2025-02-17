@@ -53,7 +53,7 @@ header {
 }
 
 #section_header {
-    padding: 20%;
+    padding: 4% 10% 4% 10%;
     margin: -2% 6% 4% 6%;
     background-color: #570022;
     opacity: 90%;
@@ -156,3 +156,57 @@ header {
     transform: scaleX(-1);
 }
 
+#t1-section-header{
+    font-size: 3rem;
+    font-family: "Cinzel Decorative", serif;
+    color:#ffffff;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+#p-section-header{
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color:#ff86a7;
+    text-align: justify;
+}
+
+b{
+    color: #ffffff;
+}
+
+#section_header:hover{
+    transition: 0.3s;
+    background-color: #6d012a;
+}
+
+.slider__nav__button:hover{
+    transition: 0.1s;
+    transform: scale(1.1);
+}
+
+#section_section{
+    background-color: #ff86a7;
+    padding: 6%;
+}
+#div_section_info{
+    display: flex;
+    justify-content: space-around;
+}
+#div-section-1{
+    padding: 4%;
+    background-color: #20001F;
+    margin-right: 10%;
+}
+#div-section-1>img{
+    width: 50%;
+}
+#div-section-2{
+    padding: 2%;
+    background-color: #570022;
+}
+#t1-section-header:hover{
+    transition: 0.3s;
+    transform: scale(1.08);
+}
