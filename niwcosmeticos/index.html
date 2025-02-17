@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Niw Cosméticos</title>
-        <link href="estilo.css" rel="stylesheet">
-        <link href="estilo.js" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+        <link href="js/estilo.js" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Corinthia:wght@400;700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Imperial+Script&family=Italiana&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
@@ -20,40 +21,52 @@
                     <h2 class="cssanimation leFadeInLeft sequence"> Fragrâncias que encantam! </h2>
                 </div>
             </div>
-            <div id="section_header">
+            <img src="imagens/flores.png" alt="flores" class="" id="flor">
+            <img src="imagens/flores.png" alt="flores" class="" id="flor-invertida">
+            <div id="section_header" class="cssanimation pushRelease">
 
             </div>
         </header>
         <main>
-            <div id="section_frames">
-                <ul class="card_list">
-
-                    <li class="frame_produto">
-                        <img src="imagens/img1.png" alt="Perfumaria Nacional" class="img_frame">
-                        <p class="text_frame">Nossos perfumes são elaborados com ingredientes de alta qualidade, refletindo a rica biodiversidade do Brasil. Cada fragrância conta uma história única, inspirada nas belezas naturais e na cultura vibrante do nosso país. Venha se encantar com nossas opções que vão do floral ao amadeirado, perfeitas para qualquer ocasião. Sinta-se confiante e especial com a autenticidade dos nossos perfumes!</p>
-                    </li>
-
-                    <li class="frame_produto">
-                        <img src="imagens/img2.png" alt="Maquiagens" class="img_frame">
-                        <p class="text_frame">Realce sua beleza com nossa linha de maquiagens a preços super acessíveis! Oferecemos uma variedade de produtos, desde bases e pós até batons e sombras, todos desenvolvidos para atender a diferentes estilos e necessidades. Nossa missão é proporcionar qualidade e inovação sem pesar no seu bolso. Explore nossas cores vibrantes e texturas incríveis e descubra como é fácil se sentir linda todos os dias!</p>
-                    </li>
-
-                    <li class="frame_produto">
-                        <img src="imagens/img3.png" alt="Importados" class="img_frame">
-                        <p class="text_frame">Selecionamos as melhores fragrâncias de marcas renomadas do mundo, trazendo até você a elegância e a sofisticação que só os grandes nomes da perfumaria podem oferecer. Cada perfume é uma obra-prima, criada para deixar uma marca inesquecível. Venha conhecer nossa coleção e encontre a sua nova assinatura olfativa!</p>
-                    </li>
-
-                    <li class="frame_produto">
-                        <img src="imagens/img4.png" alt="Promoções Imperdíveis" class="img_frame">
-                        <p class="text_frame">Aqui, você encontra descontos incríveis em uma seleção especial de produtos, desde perfumes até maquiagens e cosméticos variados. Não deixe para depois: aproveite essas ofertas e leve para casa os produtos que você ama com preços que cabem no seu bolso. Corra, as promoções são por tempo limitado!</p>
-                    </li>
-
-                    <li class="frame_produto">
-                        <img src="imagens/img5.png" alt="Presentes Personalizados" class="img_frame">
-                        <p class="text_frame">Descubra a magia dos nossos kits personalizados exuberantes, cuidadosamente elaborados com produtos de qualidade excepcional! Cada kit é uma experiência única, pensada para atender às suas necessidades e desejos. Se você está em busca de cuidados para a pele, maquiagem deslumbrante ou fragrâncias envolventes, temos opções que se adaptam ao seu estilo de vida.</p>
-                    </li>
-
-                </ul>
+            <div  id="section_frames">
+                <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+                    <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+                    <div class="slider__item">
+                        <img class="slider__image" src="imagens/img1.png" alt="Image">
+                        <div class="slider__info">
+                        <h2>Perfumaria Nacional</h2>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="imagens/img2.png" alt="Image">
+                        <div class="slider__info">
+                        <h2>Maquiagens</h2>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="imagens/img3.png" alt="Image">
+                        <div class="slider__info">
+                        <h2>Importados</h2>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="imagens/img4.png" alt="Image">
+                        <div class="slider__info">
+                        <h2>Promoções</h2>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="imagens/img5.png" alt="Image">
+                        <div class="slider__info">
+                        <h2>Personalizados</h2>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="slider__nav" style="display: flex;justify-content: center;">
+                    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+                    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+                    </div>
+                </div>
             </div>
 
             <div>
@@ -84,5 +97,6 @@
 
         <script src="estilo.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
     </body>
 </html>
