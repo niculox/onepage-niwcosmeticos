@@ -190,23 +190,143 @@ b{
     background-color: #ff86a7;
     padding: 6%;
 }
+
 #div_section_info{
     display: flex;
     justify-content: space-around;
 }
+
 #div-section-1{
-    padding: 4%;
-    background-color: #20001F;
     margin-right: 10%;
 }
+
 #div-section-1>img{
-    width: 50%;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+
 #div-section-2{
-    padding: 2%;
-    background-color: #570022;
+    padding: 1%;
+    background-color: #1E1E1E;
+    width: 70%;
 }
+
+#div-section-2>h2{
+    margin: 12% 0 6% 0;
+    font-size: 1.5rem;
+    font-family: "Cinzel Decorative", serif;
+    color:#ffffff;
+    text-transform: uppercase;
+}
+
+#div-section-2>p{
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color:#ff86a7;
+    text-align: justify;
+    padding: 6%;
+}
+
 #t1-section-header:hover{
     transition: 0.3s;
     transform: scale(1.08);
+}
+
+#div-section-3{
+    background-color: #570022;
+    margin-top: 6%;
+    padding: 1% 4% 1% 4%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#div-section-3-1>h2{
+    color:#ff86a7;
+    font-family: "Cinzel Decorative", serif;
+    font-size: 2rem;
+    margin-bottom: 4%;
+    margin-top: 10%;
+
+}
+
+#div-section-3-1>p{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    color:#ff86a7;
+    text-align: justify;
+    padding: 6%;
+}
+
+#div-section-3>img{
+    width: 55%;
+    margin-right: -8%;
+    margin-top: 2%;
+}
+
+footer{
+    background-color: #20001F;
+    padding: 8% 4% 4% 4%;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-footer{
+    background-color:#ff86a7;
+    padding: 8%;
+    border-radius: 50%;
+    margin-bottom: 30%;
+    width: 100%;
+}
+
+.img-footer>img{
+    width: 95%;
+}
+
+#footer-1{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#logo_redessociais{
+    display: flex;
+    flex-direction: column;
+    width: 8%;
+}
+
+#loc_footer>iframe{
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#redessociais{
+    margin-left: 4%;
+}
+
+#redessociais>p{
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-bottom: 23%;
+    padding: 4%;
+    width: 200%;
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#end{
+    background-color: #ffffff;
+    border-radius: 20px;
+    position: absolute;
+    top: 595%;
+    width: 40%;
+    left: 4.5%;
+    text-align: justify;
+    padding: 6% 4% 6% 4%;
+}
+
+#end>h2{
+    color: #570022;
 }
