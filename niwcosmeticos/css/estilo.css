@@ -330,3 +330,28 @@ footer{
 #end>h2{
     color: #570022;
 }
+
+#loc_footer>iframe:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+#div-section-2:hover{
+    transition: 0.3s;
+    background-color: #570022;
+}
+
+#div-section-1>img:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+#div-section-3:hover{
+    transition: 0.3s;
+    background-color: #20001F;
+}
+
+#end:hover{
+    transition: 0.2s;
+    background-color: #ff86a7;
+}
